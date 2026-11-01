@@ -208,6 +208,7 @@ html,body{max-width:100%;overflow-x:hidden}
 /* V8 image zoom */
 .productImgWrap img{cursor:zoom-in;transition:transform .18s ease}
 .productImgWrap img:active{transform:scale(.97)}
+.productImgWrap.arganThumb img{transform:scale(1.45)}
 .imageModal{position:fixed;inset:0;z-index:9999;background:rgba(9,25,18,.88);display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(7px)}
 .imageModal.open{display:flex}
 .imageModalBox{position:relative;width:min(92vw,720px);max-height:88vh;background:#fff;border-radius:24px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.38);display:flex;align-items:center;justify-content:center}
@@ -426,7 +427,7 @@ function productCard(key){
  const p=catalog[key];
  const label=key==="oral"?"MİSVAK":key==="personal"?"SPREY":key==="clean"?"OXI":"KERATİN";
  const visual = p.image
-  ? `<div class="productImgWrap">
+  ? `<div class="productImgWrap${key==="hairArgan"?" arganThumb":""}">
        <img src="${p.image}" alt="${p.name}" loading="lazy" onclick="openImageModal(this.src,this.alt)"
             onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
        <div class="imgFallback" style="display:none"><span>${label}</span></div>
