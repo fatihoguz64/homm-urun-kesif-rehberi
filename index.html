@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#173f2b">
-<title>V5 • Homm Bitkisel • Ürün Keşif Testi</title>
+<title>Homm Bitkisel • Ürün Keşif Rehberi</title>
+<meta name="description" content="2 adımlık mini testle sana uygun Homm Bitkisel ürünlerini keşfet; tüm ürün kataloğu ve WhatsApp'tan bilgi al.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Homm Bitkisel • Ürün Keşif Rehberi">
+<meta property="og:description" content="2 adımlık mini testle sana uygun Homm ürünlerini keşfet.">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
 <style>
 :root{
  --forest:#123c29; --green:#1f6a43; --green2:#31885b; --sage:#e9f1e3;
@@ -22,7 +28,7 @@ body{
  linear-gradient(180deg,#f7f3e8,#fbf8f0 55%,#f2f6ec);
  min-height:100dvh;
 }
-button,a{font:inherit}
+button,a,input{font:inherit}
 button{-webkit-tap-highlight-color:transparent}
 .app{min-height:100dvh;display:grid;place-items:center;padding:26px}
 .phone{
@@ -65,12 +71,7 @@ h2{font-size:31px;margin:12px 0 9px}
  radial-gradient(circle at 74% 26%,rgba(229,198,137,.30),transparent 22%),
  linear-gradient(145deg,#f8f2e4,#edf5e8);
 }
-.hero:after{content:"";position:absolute;left:50%;bottom:-74px;transform:translateX(-50%);width:370px;height:180px;border-radius:50%;background:rgba(255,255,255,.72);filter:blur(12px)}
 .hero img{position:absolute;object-fit:contain;z-index:2;filter:drop-shadow(0 18px 22px rgba(25,64,43,.18))}
-.hero .p1{height:213px;left:67px;bottom:12px}
-.hero .p2{width:190px;right:28px;bottom:18px}
-.leaf{position:absolute;z-index:1;font-size:63px;opacity:.42}
-.leaf.l1{left:-8px;top:3px;transform:rotate(-20deg)} .leaf.l2{right:-2px;bottom:-7px;transform:rotate(20deg)}
 .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}
 .trust div{background:#faf8f1;border:1px solid #e9e4d7;border-radius:17px;padding:11px 8px;text-align:center;font-size:11px;font-weight:800;color:#56695c}
 .btn{width:100%;border:0;border-radius:18px;padding:16px 17px;font-weight:850;font-size:15px;display:flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;text-decoration:none;transition:.17s ease}
@@ -107,13 +108,6 @@ h2{font-size:31px;margin:12px 0 9px}
  height:118px;border-radius:18px;background:linear-gradient(165deg,#f1f7ed,#f8f0df);
  border:1px solid #dfe6d9;display:grid;place-items:center;overflow:hidden;position:relative;
 }
-.visual img{max-width:94%;max-height:96%;object-fit:contain;filter:drop-shadow(0 9px 12px rgba(30,64,43,.13))}
-.pack{
- width:48px;height:88px;border-radius:11px 11px 16px 16px;background:linear-gradient(180deg,#ffffff,#e4ece1);
- border:1px solid #cfdacf;position:relative;box-shadow:0 9px 15px rgba(37,71,50,.12)
-}
-.pack:before{content:"";position:absolute;width:24px;height:13px;background:#224c36;border-radius:5px 5px 2px 2px;left:11px;top:-8px}
-.pack span{position:absolute;left:4px;right:4px;top:30px;font-family:Georgia,serif;text-align:center;font-size:8px;color:#29553c;font-weight:800}
 .card h3{font-family:Georgia,serif;font-size:17px;line-height:1.08;margin:0 0 7px}
 .card p{font-size:12px;color:var(--muted);line-height:1.45;margin:0 0 9px}
 .tags{display:flex;flex-wrap:wrap;gap:5px}
@@ -132,63 +126,19 @@ h2{font-size:31px;margin:12px 0 9px}
 html,body{max-width:100%;overflow-x:hidden}
 .phone,.screen,.products,.card,.cardBody{min-width:0}
 .products{width:100%;max-width:100%;overflow:hidden}
-.card{
-  width:100%;
-  max-width:100%;
-  grid-template-columns:104px minmax(0,1fr);
-  overflow:hidden;
-}
+.card{width:100%;max-width:100%;grid-template-columns:104px minmax(0,1fr);overflow:hidden}
 .cardBody{min-width:0;overflow:hidden}
-.card h3{
-  font-size:17px;
-  line-height:1.12;
-  overflow-wrap:anywhere;
-}
+.card h3{font-size:17px;line-height:1.12;overflow-wrap:anywhere}
 .card p,.miniLink{overflow-wrap:anywhere}
-.visual{
-  width:104px;
-  height:132px;
-  overflow:hidden;
-  background:linear-gradient(165deg,#f6f8f2,#f5f0e5);
-}
-.productImgWrap{
-  width:100%;
-  height:100%;
-  display:grid;
-  place-items:center;
-  padding:8px;
-}
-.productImgWrap img{
-  width:100%;
-  height:100%;
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;
-  object-position:center;
-  display:block;
-  border-radius:12px;
-}
-.imgFallback{
-  width:100%;
-  height:100%;
-  place-items:center;
-  border-radius:14px;
-  background:linear-gradient(160deg,#edf4e8,#f6efdf);
-  color:#2b6545;
-  font-weight:900;
-  font-size:11px;
-  letter-spacing:.7px;
-}
+.visual{width:104px;height:132px;overflow:hidden;background:linear-gradient(165deg,#f6f8f2,#f5f0e5)}
+.productImgWrap{width:100%;height:100%;display:grid;place-items:center;padding:8px}
+.productImgWrap img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;display:block;border-radius:12px}
+.imgFallback{width:100%;height:100%;place-items:center;border-radius:14px;background:linear-gradient(160deg,#edf4e8,#f6efdf);color:#2b6545;font-weight:900;font-size:11px;letter-spacing:.7px}
 @media(max-width:430px){
   .screen{padding-left:16px;padding-right:16px}
   .header{padding-left:16px;padding-right:16px}
   .progressWrap{padding-left:16px;padding-right:16px}
-  .card{
-    grid-template-columns:92px minmax(0,1fr);
-    gap:11px;
-    padding:11px;
-    border-radius:20px;
-  }
+  .card{grid-template-columns:92px minmax(0,1fr);gap:11px;padding:11px;border-radius:20px}
   .visual{width:92px;height:118px;border-radius:16px}
   .card h3{font-size:15.5px}
   .card p{font-size:11.5px;line-height:1.4}
@@ -196,25 +146,68 @@ html,body{max-width:100%;overflow-x:hidden}
   .miniLink{font-size:10.5px}
 }
 
-
 /* V5 mobile visual fixes */
 .hero{height:auto;aspect-ratio:2/3;background:#f6f4e7;overflow:hidden}
 .hero .heroFull{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;filter:none;z-index:1}
 .visual{background:#fff !important;overflow:hidden}
 .productImgWrap{background:#fff}
 .productImgWrap img{background:#fff}
-@media(max-width:430px){.hero{border-radius:24px}.badges{gap:8px}.badge{font-size:10px;padding:10px 6px}}
 
 /* V8 image zoom */
 .productImgWrap img{cursor:zoom-in;transition:transform .18s ease}
 .productImgWrap img:active{transform:scale(.97)}
-.productImgWrap.arganThumb img{transform:scale(1.45)}
 .imageModal{position:fixed;inset:0;z-index:9999;background:rgba(9,25,18,.88);display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(7px)}
 .imageModal.open{display:flex}
-.imageModalBox{position:relative;width:min(92vw,720px);max-height:88vh;background:#fff;border-radius:24px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.38);display:flex;align-items:center;justify-content:center}
-.imageModalBox img{max-width:100%;max-height:80vh;object-fit:contain;display:block}
+.imageModalBox{position:relative;width:min(92vw,720px);max-height:88vh;background:#fff;border-radius:24px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.38);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.imageModalBox img{max-width:100%;max-height:72vh;object-fit:contain;display:block}
 .imageModalClose{position:absolute;right:-8px;top:-8px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#153d2a;font-size:26px;font-weight:800;box-shadow:0 5px 18px rgba(0,0,0,.22);cursor:pointer}
 .zoomHint{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);background:rgba(21,61,42,.88);color:#fff;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;white-space:nowrap}
+.zoomCaption{margin:10px 0 26px;font-size:12px;font-weight:800;color:#153d2a;text-align:center}
+
+/* Keep the entire argan serum packshot inside its product card on mobile (V18). */
+.card:has(.serumFullView) .visual{height:210px!important;overflow:hidden!important}
+.card .productImgWrap.serumFullView{width:100%;height:100%;padding:5px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card .productImgWrap.serumFullView img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+
+/* V21 - all products, recommendations vs. catalog */
+.imgFallback span{font-size:10px;line-height:1.4;text-align:center;padding:8px}
+.sectionTitle{margin:24px 2px 0;padding-top:16px;border-top:1px solid #dce4d9}
+.sectionTitle:first-child{border-top:0;padding-top:0;margin-top:16px}
+.sectionTitle h2{font-size:21px;margin:0 0 5px}
+.sectionTitle p{font-size:12.5px;line-height:1.5;margin:0;color:#526255}
+.count{display:inline-block;margin-left:6px;font-family:Inter,sans-serif;font-size:12px;font-weight:850;color:#2b7049;background:#edf4e8;border-radius:999px;padding:3px 8px;vertical-align:middle}
+.option .optCount{margin-left:auto;font-size:11px;font-weight:850;color:#2b7049;background:#edf4e8;border-radius:999px;padding:4px 8px;white-space:nowrap}
+.option .optCount + .chev{margin-left:6px}
+.cardActions{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:9px}
+.waMini{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:850;text-decoration:none;color:#fff;background:linear-gradient(135deg,#2f8c5a,#145035);border-radius:999px;padding:7px 11px}
+.cardActions .miniLink{margin-top:0}
+.tag.code{background:#f3efe2;color:#6b5a2c}
+.tag.warn{background:#fbefe2;color:#8a5a1f}
+.card .act{font-size:10.5px;color:#7a857c;margin:-3px 0 8px;line-height:1.4}
+.card .act b{color:#55655a}
+.card .missing{font-style:italic;color:#8b8f86}
+.moreBtn{margin-top:13px}
+.searchBox{position:relative;margin-top:14px}
+.searchBox input{width:100%;border:1px solid #d6e0d2;background:#fff;border-radius:16px;padding:14px 42px 14px 42px;font-size:15px;color:var(--ink);outline:none;box-shadow:0 7px 20px rgba(30,70,45,.05)}
+.searchBox input:focus{border-color:#67a67b}
+.searchBox .ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:17px;opacity:.7}
+.searchBox .clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:#eef3ea;color:#2b6545;border-radius:50%;width:30px;height:30px;font-size:16px;cursor:pointer;display:none}
+.chips{display:flex;gap:7px;overflow-x:auto;padding:12px 2px 6px;margin:0 -2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid #dce3d7;background:#f8f6ee;color:#20583c;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.chip.active{background:linear-gradient(135deg,#2f8c5a,#145035);color:#fff;border-color:transparent}
+.catInfo{font-size:12px;color:var(--muted);margin:6px 2px 0}
+.topBack{display:inline-flex;align-items:center;gap:6px;border:0;background:none;color:#2a704a;font-weight:850;font-size:13px;padding:4px 0;cursor:pointer}
+.empty{text-align:center;color:var(--muted);font-size:13px;padding:30px 10px}
+.sentinel{height:1px}
+@media(max-width:430px){.waMini{font-size:10.5px;padding:7px 10px}}
+/* V21 fix: tall bottles were cut off because the image height had no definite reference.
+   The wrapper now fills the card visual exactly, so object-fit:contain always shows the whole pack. */
+.phone{overflow:clip} /* decorative leaves may never shift the layout sideways (scrollIntoView / focus) */
+.visual{position:relative}
+.visual .productImgWrap,.card .visual .productImgWrap.serumFullView{position:absolute;inset:0;width:auto;height:auto;display:block;padding:8px}
+.card .visual .productImgWrap.serumFullView{padding:5px}
+.visual .productImgWrap img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:center}
 </style>
 </head>
 <body>
@@ -231,12 +224,15 @@ html,body{max-width:100%;overflow-x:hidden}
   <div class="progressWrap"><div class="progressTrack"><div class="progress" id="progress"></div></div></div>
 
   <section class="screen active" id="start">
-   <div class="kicker">🌿 60 saniyelik mini test</div>
+   <div class="kicker">🌿 2 adımlık mini test</div>
    <h1>Sana uygun Homm ürünlerini keşfet.</h1>
-   <p class="lead">İhtiyaç alanını seç; sonraki sorular seçimine göre değişsin ve yalnızca o kategorideki uygun ürünleri görelim.</p>
-   <div class="hero"><img class="heroFull" src="assets/images/v12-inline-01.png" alt="Homm Clean Oxi Power"></div>
-   <div class="trust"><div>✓ Kısa test</div><div>✓ Kişisel eşleşme</div><div>✓ WhatsApp bilgi</div></div>
-   <button class="btn primary" onclick="begin()">Teste Başla <span>→</span></button>
+   <p class="lead">Önce ürün kategorisini seç, ardından tek bir ihtiyaç sorusunu cevapla; o kategorideki uygun ürünleri ayrı, diğer ürünleri ayrı gösterelim.</p>
+   <div class="hero"><img class="heroFull" src="assets/images/hero.webp" alt="Homm Clean Oxi Power"></div>
+   <div class="trust"><div>✓ 2 kısa adım</div><div id="trustCount">✓ Tüm ürünler</div><div>✓ WhatsApp bilgi</div></div>
+   <div class="ctas">
+    <button class="btn primary" onclick="begin()">Teste Başla <span>→</span></button>
+    <button class="btn secondary" onclick="openCatalog()">📚 Tüm Ürün Kataloğu</button>
+   </div>
   </section>
 
   <section class="screen" id="quiz">
@@ -254,221 +250,280 @@ html,body{max-width:100%;overflow-x:hidden}
 
   <section class="screen" id="result">
    <div class="resultTop">
-    <div class="resultBadge">✓ Eşleşme tamamlandı</div>
-    <h2>Sana uygun ürünler</h2>
-    <p class="lead">Yanıtlarına göre en uygun eşleşmeni hazırladık.</p>
+    <div class="resultBadge" id="resultBadge">✓ Eşleşme tamamlandı</div>
+    <h2 id="resultTitle">Sana uygun ürünler</h2>
+    <p class="lead" id="resultLead">Yanıtına göre uygun ürünleri ve kategorideki diğer ürünleri ayrı ayrı listeledik.</p>
    </div>
    <div class="profile" id="profile"></div>
-   <div class="products" id="products"></div>
+   <div id="recBlock">
+    <div class="sectionTitle"><h2>Size Önerilen Ürünler<span class="count" id="recCount"></span></h2><p id="recNote">Seçtiğin ihtiyaca en uygun ürünler (en fazla 4), en uygun olandan başlayarak sıralandı.</p></div>
+    <div class="products" id="products"></div>
+   </div>
+   <div id="otherBlock">
+    <div class="sectionTitle"><h2 id="otherTitle">Diğer Ürünler<span class="count" id="otherCount"></span></h2><p id="otherNote">Aynı kategorideki diğer ürünler. Bu ürünler seçtiğin ihtiyaç için doğrudan öneri değildir.</p></div>
+    <div class="products" id="others"></div>
+    <button class="btn secondary moreBtn" id="othersMore" onclick="renderMore('others')">Daha fazla göster</button>
+   </div>
    <div class="ctas">
     <a class="btn primary" id="wa" target="_blank" rel="noopener">💬 WhatsApp'tan Bilgi Al</a>
     <button class="btn secondary" onclick="shareResult()">↗ Sonucumu Paylaş</button>
+    <button class="btn secondary" onclick="openCatalog(currentCat)">📚 Katalogda İncele</button>
     <button class="btn secondary" onclick="restart()">↻ Testi Tekrar Çöz</button>
    </div>
-   <div class="note">Bu araç ürün keşfi içindir; tıbbi değerlendirme veya tedavi önerisi değildir. Kullanım ve uyarılar için ürün ambalajı ile üreticinin resmi açıklamaları esas alınmalıdır.</div>
+   <div class="note" id="resultNote">Bu araç ürün keşfi içindir; tıbbi değerlendirme veya tedavi önerisi değildir. Kullanım ve uyarılar için ürün ambalajı ile üreticinin resmî açıklamaları esas alınmalıdır.</div>
   </section>
 
-  <div class="footer">Bağımsız temsilci kullanımına uygun ürün keşif arayüzü • Güncel ürün adlarıyla hazırlanmıştır. • V10</div>
+  <section class="screen" id="catalog">
+   <button class="topBack" onclick="back()">← Geri</button>
+   <h2 style="margin-top:6px">Ürün Kataloğu</h2>
+   <p class="lead">Ürün adı, ürün kodu veya ihtiyaç ile ara; kategoriye göre filtrele.</p>
+   <div class="searchBox">
+    <span class="ico">🔎</span>
+    <input id="q" type="search" inputmode="search" autocomplete="off" placeholder="Örn. şampuan, SB 2004, nemlendirici" oninput="onSearch()">
+    <button class="clear" id="qClear" type="button" aria-label="Aramayı temizle" onclick="clearSearch()">×</button>
+   </div>
+   <div class="chips" id="chips"></div>
+   <div class="catInfo" id="catInfo"></div>
+   <div class="products" id="catList"></div>
+   <div class="sentinel" id="catSentinel"></div>
+   <button class="btn secondary moreBtn" id="catMore" onclick="renderMore('catList')">Daha fazla göster</button>
+   <div class="note">Ürün bilgileri Homm Bitkisel resmî Türkiye sitesinden (hommbitkisel.com.tr) alınmıştır. Takviye edici gıdalar ilaç değildir; hastalıkların önlenmesi veya tedavisi amacıyla kullanılmaz.</div>
+  </section>
+
+  <div class="footer">Bağımsız temsilci kullanımına uygun ürün keşif arayüzü • Ürün bilgileri resmî siteden 03.11.2026 tarihinde alınmıştır. • V22</div>
  </main>
 </div>
 <div class="toast" id="toast">Bağlantı kopyalandı</div>
-
 
 <div class="imageModal" id="imageModal" onclick="closeImageModal(event)">
  <div class="imageModalBox">
   <button class="imageModalClose" type="button" aria-label="Kapat" onclick="closeImageModal(event,true)">×</button>
   <img id="imageModalImg" src="" alt="Büyütülmüş ürün görseli">
+  <div class="zoomCaption" id="zoomCaption"></div>
   <div class="zoomHint">Kapatmak için dışarı dokun</div>
  </div>
 </div>
+<script src="products.js?v=5021d8e7"></script>
 <script>
 const PHONE="905337650990";
-
-const catalog={
- hair:{
-  name:"Homm Life Keratin Sütü Sprey 200 ML",
-  desc:"Kolay tarama, daha yumuşak ve bakımlı görünüm, kabarma-elektriklenme görünümüne karşı bakım ve pratik şekillendirme desteği.",
-  tags:["Saç bakımı","Pratik kullanım","Keratin"],
-  image:"assets/images/v12-product-04.jpg",
-  url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-keratin-sutu-sprey-200-ml"
- },
- clean:{
-  name:"Homm Clean Oxi Power Beyazlar İçin 510 GR",
-  desc:"Beyaz çamaşırlarda mat görünüm, grileşme ve günlük lekelerin temizlenmesine; yıkama rutinine destek.",
-  tags:["Beyaz çamaşır","Leke desteği","Temizlik"],
-  image:"assets/images/v12-inline-02.png",
-  url:"https://www.hommbitkisel.com.tr/urun-detay/homm-clean-oxi-power-beyazlar-icin-510gr"
- },
- oral:{
-  name:"Homm Life Misvak Diş Macunu 75 ML",
-  desc:"Misvak, rezene, meyan kökü ve papatya içerikli günlük ağız bakım ürünü; temiz kullanım hissini destekler.",
-  tags:["Ağız bakımı","Misvak","Günlük rutin"],
-  image:"assets/images/v12-product-06.jpg",
-  url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-misvak-dis-macunu-75-ml"
- },
- personal:{
-  name:"Homm Life Ter Önleyici Sprey 100 ML",
-  desc:"Koltuk altı ve ayak bölgesinde günlük bakım için pratik sprey formu; temiz ve ferah his sağlamaya yardımcı olur.",
-  tags:["Kişisel bakım","Ferahlık","Sprey"],
-  image:"assets/images/v12-product-07.jpg",
-  url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-ter-onleyici-sprey-100-ml"
- }
-};
-
-// V7: Kategoriye özel akış + kategori kilidi + tüm sonuç ürünlerinde görsel.
-Object.assign(catalog,{
- cleanSurface:{name:"Homm Clean Yüzey Temizleyicisi 1000 ML",desc:"Günlük farklı yüzeylerin temizliği için genel amaçlı yüzey temizleyici.",tags:["Ev temizliği","Yüzey","Günlük kullanım"],image:"assets/images/v12-product-03.jpg",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-clean-yuzey-temizleyicisi-1000-ml"},
- cleanGrease:{name:"Homm Clean Oxi Power Mutfak 500 GR",desc:"Mutfak gereçlerinde kireç, kararma, yağ ve zorlu kalıntılara yönelik yoğun temizlik desteği.",tags:["Ev temizliği","Mutfak","Oxi Power"],image:"assets/images/v12-product-08.png",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-clean-oxi-power-mutfak-500-gr"},
- hairZinc:{name:"Homm Life Çinko & Çay Ağacı Şampuan 400 ML",desc:"Yağlanmaya ve kepek görünümüne eğilimli saç derisinde arındırıcı bakım için geliştirilmiş şampuan.",tags:["Saç bakımı","Yağlı saç","Kepek eğilimi"],image:"assets/images/v12-product-01.jpg",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-cinko-cay-agaci-sampuan-400-ml"},
- hairArgan:{name:"Homm Life Argan Yağlı Serum 30 ML",desc:"Saç boy ve uçlarında bakım, daha düzenli ve bakımlı görünüm için serum formu.",tags:["Saç bakımı","Argan","Serum"],image:"assets/images/v12-product-10.jpg",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-argan-yagli-serum-30-ml"},
- hairMask:{name:"Homm Life Keratin Saç Maskesi 500 ML",desc:"Yoğun bakım rutini isteyenler için keratin saç maskesi.",tags:["Saç bakımı","Maske","Yoğun bakım"],image:"assets/images/v12-product-05.jpg",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-keratin-sac-maskesi-500-ml"},
- oralSpray:{name:"Homm Life Nefes Tazeleyici Ağız Spreyi 25 ML",desc:"Gün içinde pratik kullanım ve nefes tazeliği isteyenler için sprey formu.",tags:["Ağız bakımı","Sprey","Pratik"],image:"assets/images/v12-product-02.jpg",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-nefes-tazeleyici-agiz-spreyi-25-ml"},
- oralWater:{name:"Homm Life Nane Aromalı Ağız Bakım Suyu 250 ML",desc:"Fırçalama rutinini ağız bakım suyu ile tamamlamak isteyenler için.",tags:["Ağız bakımı","Nane","Bakım suyu"],image:"assets/images/v12-product-09.jpeg",url:"https://www.hommbitkisel.com.tr/urun-detay/homm-life-nane-aromali-agiz-bakim-suyu-250ml"},
- personalAlt:{name:"Homm Life Ter Önleyici Sprey 100 ML",desc:"Koltuk altı ve ayak bölgesinde günlük, pratik bakım için sprey formu.",tags:["Kişisel bakım","Ferahlık","Sprey"],image:catalog.personal.image,url:catalog.personal.url}
-});
-
-const core={category:{kicker:"1. adım • Ana ihtiyaç",q:"En çok hangi alanda ürün arıyorsun?",hint:"Seçtiğin alana göre sonraki sorular tamamen değişecek.",options:[
- ["hair","💇‍♀️","Saç bakımı","Saçının ihtiyacına göre bakım"],
- ["clean","🏠","Ev temizliği","Çamaşır, yüzey, mutfak ve kir"],
- ["oral","🪥","Ağız bakımı","Günlük ağız bakım rutini"],
- ["personal","✨","Kişisel bakım","Günlük ferahlık ve pratik bakım"]
-]}};
-
-const branch={
- clean:[
-  {kicker:"2. adım • Ev temizliği",q:"En çok hangi alan için ürün arıyorsun?",hint:"Doğrudan temizlik ihtiyacını seç.",options:[
-   ["laundry","🧺","Çamaşır","Beyazlar, lekeler ve yıkama rutini",{clean:6}],
-   ["surface","🧽","Genel yüzeyler","Zemin ve silinebilir yüzeyler",{cleanSurface:6}],
-   ["grease","🍳","Mutfak","Yağ ve zorlu mutfak kalıntıları",{cleanGrease:6}],
-   ["mixed","🏠","Birden fazla alan","Genel ev temizliği",{clean:2,cleanSurface:2,cleanGrease:2}]
-  ]},
-  {kicker:"Son adım • Ev temizliği",q:"Seni en çok hangi sorun zorluyor?",hint:"Son öneriyi buna göre netleştirelim.",options:[
-   ["white","⚪","Beyazlarda matlaşma / lekeler","Çamaşır temizliği önceliğim",{clean:5}],
-   ["dust","✨","Toz ve günlük yüzey kiri","Rutin yüzey temizliği",{cleanSurface:5}],
-   ["oil","🍳","Yağlı ve inatçı kir","Özellikle mutfakta",{cleanGrease:5}],
-   ["mixed","🔄","İhtiyacım değişiyor","Farklı alanlarda kullanıyorum",{clean:1,cleanSurface:1,cleanGrease:1}]
-  ]}
- ],
- hair:[
-  {kicker:"2. adım • Saç bakımı",q:"Saçında veya saç derinde en çok hangisini yaşıyorsun?",hint:"Saç tipine ve asıl ihtiyacına göre seç.",options:[
-   ["oily","💧","Çabuk yağlanma","Saç diplerim kısa sürede yağlanıyor",{hairZinc:7}],
-   ["dandruff","❄️","Kepek / pullanma eğilimi","Saç derimde kepek görünümü oluyor",{hairZinc:7}],
-   ["dry","🌾","Kuruluk ve yıpranmış görünüm","Boy ve uçlarda bakım istiyorum",{hairArgan:5,hairMask:4}],
-   ["frizz","🪮","Kabarma / zor taranma","Daha kolay tarama ve düzenli görünüm",{hair:7}]
-  ]},
-  {kicker:"Son adım • Saç bakımı",q:"Saç bakımında ikinci önceliğin hangisi?",hint:"İki kısa cevapla en uygun eşleşmeyi yapalım.",options:[
-   ["scalp","🌿","Saç derisini arındırmak","Yağlanma veya kepek eğilimi önceliğim",{hairZinc:5}],
-   ["ends","✨","Boy ve uçları beslemek","Kuru görünen uçlara bakım",{hairArgan:5}],
-   ["repair","🫙","Yoğun bakım yapmak","Maske tipi bakım istiyorum",{hairMask:5}],
-   ["easy","💦","Kolay tarama / pratik bakım","Durulanmayan pratik ürün istiyorum",{hair:5}]
-  ]}
- ],
- oral:[
-  {kicker:"2. adım • Ağız bakımı",q:"Ağız bakımında asıl ihtiyacın hangisi?",hint:"En çok kullanacağın ürünü seç.",options:[
-   ["brush","🪥","Günlük diş temizliği","Diş macunu rutinim için",{oral:6}],
-   ["breath","🌬️","Nefes tazeliği","Gün içinde pratik kullanım",{oralSpray:6}],
-   ["rinse","💧","Fırçalama sonrası bakım","Ağız bakım suyu kullanmak",{oralWater:6}],
-   ["mixed","🔄","Genel ağız bakımı","Birden fazla ihtiyacım var",{oral:2,oralSpray:2,oralWater:2}]
-  ]},
-  {kicker:"Son adım • Ağız bakımı",q:"Ürünü en çok ne zaman kullanmak istersin?",hint:"Kullanım alışkanlığına göre sonucu netleştirelim.",options:[
-   ["routine","🌅","Sabah ve akşam","Düzenli fırçalama rutininde",{oral:4}],
-   ["outside","🚶","Gün içinde dışarıda","Çantada taşınabilir olsun",{oralSpray:4}],
-   ["after","✨","Fırçalamadan sonra","Rutini tamamlamak için",{oralWater:4}],
-   ["any","📅","Duruma göre","Kullanım zamanı değişiyor",{oral:1,oralSpray:1,oralWater:1}]
-  ]}
- ],
- personal:[
-  {kicker:"2. adım • Kişisel bakım",q:"Kişisel bakımda en çok ne arıyorsun?",hint:"Günlük ihtiyacını seç.",options:[
-   ["fresh","💧","Günlük ferahlık","Pratik bölgesel bakım",{personal:5}],
-   ["sweat","☀️","Terlemeye karşı bakım","Koltuk altı kullanımına uygun",{personal:6}],
-   ["fast","⚡","Hızlı uygulama","Sprey formu istiyorum",{personal:5}],
-   ["simple","🤍","Sade günlük rutin","Az adımlı bakım",{personal:4}]
-  ]},
-  {kicker:"Son adım • Kişisel bakım",q:"Ürünü en çok nerede kullanırsın?",hint:"Son eşleşmeyi kullanım alanına göre yapalım.",options:[
-   ["underarm","🙌","Koltuk altı","Günlük bölgesel bakım",{personal:5}],
-   ["feet","🦶","Ayak bölgesi","Günlük ferahlık",{personal:4}],
-   ["both","✨","Her ikisi","Çok yönlü kullanım",{personal:5}],
-   ["unsure","🤷","Henüz emin değilim","Genel bir öneri istiyorum",{personal:2}]
-  ]}
- ]
-};
-
-const pools={clean:["clean","cleanSurface","cleanGrease"],hair:["hair","hairZinc","hairArgan","hairMask"],oral:["oral","oralSpray","oralWater"],personal:["personal"]};
-let flow=[], step=0, answers=[];
+const MODE="files"; // "inline": tek dosya, "files": GitHub Pages
+const BATCH=12;
+const MAX_REC=4; // bir ihtiyaç için en fazla önerilen ürün
+let DB=null, META=null, BY={}, IMG={};
+let flow=[], step=0, answers=[], currentCat=null, currentNeed=null;
+const lists={};           // id -> {items, shown}
+let catFilter="all", searchTimer=null, observer=null;
 
 function $(id){return document.getElementById(id)}
-function switchScreen(id){
- ["start","quiz","result"].forEach(x=>$(x).classList.toggle("active",x===id));
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function norm(s){return String(s||"").toLocaleLowerCase("tr").replace(/[çğıöşüâî]/g,c=>({"ç":"c","ğ":"g","ı":"i","ö":"o","ş":"s","ü":"u","â":"a","î":"i"}[c])).replace(/\s+/g," ").trim()}
+function catOf(id){return META.cats.find(c=>c.id===id)}
+function inCat(p,cat){return p.cats.includes(cat)}
+function thumb(p){return MODE==="inline"?IMG[p.code]:"assets/images/thumbs/"+p.img}
+function large(p){return MODE==="inline"?IMG[p.code]:"assets/images/large/"+p.img}
+
+async function boot(){
+ try{
+  if(MODE==="inline"){
+   DB=JSON.parse($("productData").textContent);
+   IMG=JSON.parse($("imageData").textContent);
+  }else if(window.HOMM_DB){
+   DB=window.HOMM_DB; // products.js – çift tıklayarak (file://) açınca da çalışır
+  }else{
+   const r=await fetch("products.json",{cache:"no-cache"});
+   DB=await r.json();
+  }
+ }catch(e){
+  $("start").insertAdjacentHTML("beforeend",`<div class="note">Ürün verisi yüklenemedi. Zip dosyasını önce bir klasöre çıkarın (sağ tık → Tümünü ayıkla); index.html, products.js ve assets klasörü yan yana olmalıdır.</div>`);
+  console.error(e);return;
+ }
+ META=DB.meta;
+ DB.products.forEach(p=>{BY[p.code]=p;p._s=norm([p.name,p.code,p.desc,p.act,p.siteCat,catOf(p.cat).label,p.kind].join(" "))});
+ $("trustCount").textContent=`✓ ${DB.products.length} ürün`;
+ history.replaceState({s:"start"},"");
 }
-function begin(){answers=[];step=0;flow=[core.category];switchScreen("quiz");render();}
-function choose(i){answers[step]=i;document.querySelectorAll(".option").forEach((el,n)=>el.classList.toggle("selected",n===i));$("next").disabled=false;}
-function optionButton(o,i){return `<button class="option${answers[step]===i?" selected":""}" onclick="choose(${i})"><div class="optIcon">${o[1]}</div><div><b>${o[2]}</b><small>${o[3]}</small></div><div class="chev">›</div></button>`;}
-function render(){const q=flow[step];const total=flow.length;$("sectionKicker").textContent=q.kicker;$("question").textContent=q.q;$("hint").textContent=q.hint;$("options").innerHTML=q.options.map(optionButton).join("");$("next").disabled=answers[step]===undefined;$("next").textContent=step===total-1?"Sonucu Gör →":"Devam →";$("counter").textContent=`${step+1} / ${total}`;$("progress").style.width=`${((step+1)/total)*100}%`;}
+
+/* ---------- navigation (also supports the phone's back button, e.g. Instagram in-app browser) ---------- */
+function switchScreen(id,push=true){
+ ["start","quiz","result","catalog"].forEach(x=>$(x).classList.toggle("active",x===id));
+ if(push)history.pushState({s:id,step},"");
+ window.scrollTo({top:0,behavior:"instant"});
+}
+window.addEventListener("popstate",e=>{
+ if($("imageModal").classList.contains("open")){closeImageModal({target:{id:"imageModal"}},true);history.pushState(e.state,"");return}
+ const s=e.state?.s||"start";
+ if(s==="quiz"){step=e.state.step||0;if(step===0)flow=[categoryQuestion()];render();}
+ if(s==="start"){flow=[];step=0;answers=[];setProgress("Başlangıç",0)}
+ switchScreen(s,false);
+});
+function setProgress(label,pct){$("counter").textContent=label;$("progress").style.width=pct+"%"}
+
+/* ---------- quiz ---------- */
+function categoryQuestion(){
+ return {kicker:"1. adım • Kategori",q:"Hangi alanda ürün arıyorsun?",hint:"Kategoriyi seç; ardından tek bir ihtiyaç sorusu gelecek.",
+  options:META.cats.map(c=>[c.id,c.icon,c.label,c.sub,DB.products.filter(p=>inCat(p,c.id)).length+" ürün"])};
+}
+function needQuestion(cat){
+ const c=catOf(cat);
+ return {kicker:"Son adım • "+c.label,q:"En çok hangi ihtiyacın için ürün arıyorsun?",hint:"Birini seç; uygun ürünleri hemen gösterelim.",
+  options:META.needs[cat].map(n=>[n.id,n.icon,n.label,n.hint,n.codes.length+" ürün"])};
+}
+function begin(){if(!DB)return;answers=[];step=0;flow=[categoryQuestion()];switchScreen("quiz");render();}
+function optionButton(o,i){return `<button class="option${answers[step]===i?" selected":""}" onclick="choose(${i})"><div class="optIcon">${o[1]}</div><div><b>${esc(o[2])}</b><small>${esc(o[3])}</small></div>${o[4]?`<span class="optCount">${esc(o[4])}</span>`:""}<div class="chev">›</div></button>`;}
+function render(){
+ const q=flow[step];const total=2;
+ $("sectionKicker").textContent=q.kicker;$("question").textContent=q.q;$("hint").textContent=q.hint;
+ $("options").innerHTML=q.options.map(optionButton).join("");
+ $("next").disabled=answers[step]===undefined;
+ $("next").textContent=step===0?"Devam →":"Sonucu Gör →";
+ setProgress(`${step+1} / ${total}`,((step+1)/total)*100);
+}
+function choose(i){
+ answers[step]=i;
+ document.querySelectorAll("#options .option").forEach((el,n)=>el.classList.toggle("selected",n===i));
+ $("next").disabled=false;
+ setTimeout(forward,140); // tek dokunuşla ilerle
+}
 function forward(){
  if(answers[step]===undefined)return;
- if(step===0&&flow.length===1){
-  const cat=core.category.options[answers[0]][0];
-  flow=[core.category,...branch[cat]];
+ if(step===0){
+  const cat=flow[0].options[answers[0]][0];
+  currentCat=cat;
+  if(!META.needs[cat]){currentNeed=null;finish();return}   // takviye / diğer: yalnızca katalog
+  flow=[flow[0],needQuestion(cat)];answers.length=1;step=1;
+  history.pushState({s:"quiz",step:1},"");render();window.scrollTo({top:0});
+ }else{
+  currentNeed=META.needs[currentCat][answers[1]];finish();
  }
- if(step<flow.length-1){step++;render();}else finish();
 }
-function back(){if(step===0){restart();return;}step--;render();}
-function rankedProducts(){
- const cat=core.category.options[answers[0]][0];
- let keys=pools[cat];
- const score=Object.fromEntries(keys.map(k=>[k,0]));
- for(let i=1;i<flow.length;i++){
-  const opt=flow[i].options[answers[i]];const weights=opt?.[4]||{};
-  for(const [k,v] of Object.entries(weights)){if(k in score)score[k]+=v;}
- }
- return keys.slice().sort((a,b)=>score[b]-score[a]);
-}
-function productCard(key){
- const p=catalog[key];
- const label=key==="oral"?"MİSVAK":key==="personal"?"SPREY":key==="clean"?"OXI":"KERATİN";
- const visual = p.image
-  ? `<div class="productImgWrap${key==="hairArgan"?" arganThumb":""}">
-       <img src="${p.image}" alt="${p.name}" loading="lazy" onclick="openImageModal(this.src,this.alt)"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-       <div class="imgFallback" style="display:none"><span>${label}</span></div>
-     </div>`
-  : `<div class="imgFallback"><span>${label}</span></div>`;
+function back(){history.length>1?history.back():restart()}
+
+/* ---------- cards ---------- */
+function productCard(p){
+ const src=thumb(p);
+ const serum=p.code==="SB 1003"?" serumFullView":"";
+ const visual=src
+  ? `<div class="productImgWrap${serum}"><img src="${src}" alt="${esc(p.name)}" loading="lazy" decoding="async" data-code="${esc(p.code)}" onclick="openImageModal(this.dataset.code)"
+       onerror="imgFail(this)"><div class="imgFallback" style="display:none"><span>GÖRSEL<br>YÜKLENEMEDİ</span></div></div>`
+  : `<div class="imgFallback" style="display:grid"><span>ÜRÜN GÖRSELİ<br>DOĞRULANMADI</span></div>`;
+ const desc=p.desc?esc(p.desc):`<span class="missing">${p.officialDesc?"Ayrıntılı bilgi için resmî ürün sayfasını inceleyin.":"Resmî sitede bu ürün için açıklama yer almıyor."}</span>`;
+ const tags=[`<span class="tag code">${esc(p.code)}</span>`,`<span class="tag">${esc(catOf(p.cat).label)}</span>`];
+ if(p.kind!=="Ürün")tags.push(`<span class="tag warn">${esc(p.kind)}</span>`);
+ const msg=`Merhaba, ${p.name} (Ürün kodu: ${p.code}) hakkında bilgi almak istiyorum.`;
  return `<article class="card">
    <div class="visual">${visual}</div>
    <div class="cardBody">
-     <h3>${p.name}</h3>
-     <p>${p.desc}</p>
-     <div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-     <a class="miniLink" href="${p.url}" target="_blank" rel="noopener">Resmî ürün bilgisini gör →</a>
+     <h3>${esc(p.name)}</h3>
+     <p>${desc}</p>
+     ${p.act?`<div class="act"><b>İçerik:</b> ${esc(p.act)}</div>`:""}
+     <div class="tags">${tags.join("")}</div>
+     <div class="cardActions">
+       <a class="waMini" href="https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">💬 Bilgi al</a>
+       <a class="miniLink" href="${esc(p.url)}" target="_blank" rel="noopener">Resmî ürün sayfası →</a>
+     </div>
    </div>
  </article>`;
 }
-function finish(){
- const ranked=rankedProducts();const cat=core.category.options[answers[0]][0];
- const profiles={hair:["Saç bakım eşleşmen","Yanıtlarına göre saç bakımındaki kullanım biçimine en yakın ürünleri sıraladık."],clean:["Ev temizliği eşleşmen","Yanıtlarına göre yalnızca ev temizliği ürünleri arasından en uygun seçenekleri sıraladık."],oral:["Ağız bakım eşleşmen","Yanıtlarına göre yalnızca ağız bakım ürünleri arasından en uygun seçenekleri sıraladık."],personal:["Kişisel bakım eşleşmen","Yanıtlarına göre kişisel bakım ihtiyacına en yakın ürünü belirledik."]};
- const selected=ranked.slice(0,Math.min(2,ranked.length));
- const resultNote=selected.length===1?"Yanıtlarına göre seçtiğin alt alana uygun ürünü belirledik.":profiles[cat][1];
- $("profile").innerHTML=`<b>${profiles[cat][0]}</b><p>${resultNote}</p>`;$("products").innerHTML=selected.map(productCard).join("");
- const names=selected.map(k=>catalog[k].name).join(" ve ");const msg=`Merhaba, Homm ürün keşif testini yaptım. Bana ${names} önerildi. Bu ürünler hakkında bilgi almak istiyorum.`;$("wa").href=`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;$("counter").textContent="Sonuç";$("progress").style.width="100%";switchScreen("result");window._resultText=`Homm ürün keşif testinde bana ${names} önerildi.`;
+// Yerel görsel açılmazsa resmî Homm sitesindeki aynı görsel denenir; o da açılmazsa uyarı kutusu gösterilir.
+function imgFail(img){
+ const p=BY[img.dataset.code];
+ if(p&&p.imgSrc&&!img.dataset.retry){img.dataset.retry="1";img.src=p.imgSrc;return}
+ img.style.display="none";img.nextElementSibling.style.display="grid";
 }
+function setList(id,items){lists[id]={items,shown:0};$(id).innerHTML="";renderMore(id)}
+function renderMore(id){
+ const L=lists[id];if(!L)return;
+ const next=L.items.slice(L.shown,L.shown+BATCH);
+ $(id).insertAdjacentHTML("beforeend",next.map(productCard).join(""));
+ L.shown+=next.length;
+ const more=id==="others"?$("othersMore"):id==="catList"?$("catMore"):null;
+ if(more){more.style.display=L.shown<L.items.length?"flex":"none";more.textContent=`Daha fazla göster (${L.items.length-L.shown})`}
+}
+
+/* ---------- result ---------- */
+function finish(){
+ const c=catOf(currentCat);
+ const all=DB.products.filter(p=>inCat(p,currentCat));
+ let rec=[],others=all;
+ if(currentNeed){
+  rec=currentNeed.codes.map(k=>BY[k]).filter(Boolean).slice(0,MAX_REC);
+  const recCodes=rec.map(p=>p.code);
+  others=all.filter(p=>!recCodes.includes(p.code));
+ }
+ $("profile").innerHTML=currentNeed
+  ?`<b>${c.icon} ${esc(c.label)} • ${esc(currentNeed.label)}</b><p>Öneriler; ürünlerin resmî açıklaması, içerik listesi ve ürün bilgilerine göre bu ihtiyaçla en iyi eşleşen ürünlerden oluşur. Kategorideki diğer ürünler ayrıca listelenmiştir.</p>`
+  :`<b>${c.icon} ${esc(c.label)}</b><p>${currentCat==="takviye"?"Takviye edici gıdalar için kişisel öneri yapılmaz; ürünler yalnızca katalog olarak listelenir. Takviye edici gıdalar ilaç değildir, hastalıkların önlenmesi veya tedavisi amacıyla kullanılmaz.":"Bu bölümde numune/tester ürünler, kampanya paketleri, katalog ve yardımcı malzemeler yer alır; bakım ürünü önerisi olarak sunulmaz."}</p>`;
+ $("resultBadge").textContent=currentNeed?"✓ Eşleşme tamamlandı":"ℹ️ Katalog listesi";
+ $("resultTitle").textContent=currentNeed?"Sana uygun ürünler":c.label;
+ $("resultLead").textContent=currentNeed?"Önerilen ürünler ve kategorideki diğer ürünler ayrı listelendi.":"Bu kategoride ihtiyaç sorusu sorulmaz.";
+ $("recBlock").style.display=currentNeed?"":"none";
+ $("recCount").textContent=rec.length;
+ setList("products",rec);renderMore("products");renderMore("products"); // önerilerin hepsi
+ $("otherTitle").firstChild.textContent=currentNeed?"Diğer Ürünler":"Kategorideki Ürünler";
+ $("otherNote").textContent=currentNeed?`${c.label} kategorisindeki diğer ürünler. Bu ürünler seçtiğin ihtiyaç için doğrudan öneri değildir.`:"Bilgi almak istediğin ürünün kartındaki WhatsApp düğmesini kullanabilirsin.";
+ $("otherCount").textContent=others.length;
+ $("otherBlock").style.display=others.length?"":"none";
+ setList("others",others);
+ // WhatsApp: önerilen ürünlerin TAMAMI, alt alta
+ const lines=rec.map(p=>`• ${p.name} (Ürün kodu: ${p.code})`).join("\n");
+ const msg=currentNeed
+  ?`Merhaba, Homm ürün keşif testini yaptım.\nKategori: ${c.label}\nİhtiyaç: ${currentNeed.label}\n\nBana önerilen ürünler:\n${lines}\n\nBu ürünler hakkında bilgi almak istiyorum.`
+  :`Merhaba, Homm ürün kataloğunda ${c.label} kategorisindeki ürünler hakkında bilgi almak istiyorum.`;
+ $("wa").href=`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+ window._resultText=currentNeed?`Homm ürün keşif testinde (${c.label} • ${currentNeed.label}) bana şu ürünler önerildi:\n${lines}`:`Homm ${c.label} ürünlerine göz attım.`;
+ setProgress("Sonuç",100);switchScreen("result");
+}
+
+/* ---------- catalog ---------- */
+function openCatalog(cat){
+ if(!DB)return;
+ catFilter=cat||"all";
+ $("chips").innerHTML=[`<button class="chip" data-c="all" onclick="setCat('all')">Tümü (${DB.products.length})</button>`]
+  .concat(META.cats.map(c=>`<button class="chip" data-c="${c.id}" onclick="setCat('${c.id}')">${c.icon} ${esc(c.label)} (${DB.products.filter(p=>inCat(p,c.id)).length})</button>`)).join("");
+ setProgress("Katalog",100);switchScreen("catalog");applyCatalog();
+ const a=document.querySelector(".chip.active");a&&a.scrollIntoView({inline:"center",block:"nearest"});
+}
+function setCat(c){catFilter=c;applyCatalog()}
+function onSearch(){clearTimeout(searchTimer);$("qClear").style.display=$("q").value?"block":"none";searchTimer=setTimeout(applyCatalog,160)}
+function clearSearch(){$("q").value="";onSearch();$("q").focus()}
+function applyCatalog(){
+ document.querySelectorAll(".chip").forEach(b=>b.classList.toggle("active",b.dataset.c===catFilter));
+ const terms=norm($("q").value).split(" ").filter(Boolean);
+ const items=DB.products.filter(p=>(catFilter==="all"||inCat(p,catFilter))&&terms.every(t=>p._s.includes(t)));
+ const cl=catFilter==="all"?"Tüm kategoriler":catOf(catFilter).label;
+ $("catInfo").textContent=`${items.length} ürün • ${cl}${terms.length?` • “${$("q").value.trim()}”`:""}`;
+ setList("catList",items);
+ if(!items.length)$("catList").innerHTML=`<div class="empty">Aramana uygun ürün bulunamadı.<br>Farklı bir kelime veya ürün kodu dene.</div>`;
+}
+function setupObserver(){
+ if(!("IntersectionObserver" in window))return;
+ observer=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&$("catalog").classList.contains("active"))renderMore("catList")})},{rootMargin:"600px"});
+ observer.observe($("catSentinel"));
+}
+
+/* ---------- share / toast / zoom / restart (V20 behaviour kept) ---------- */
 function shareResult(){
  const txt=window._resultText || "Homm ürün keşif testimi tamamladım.";
  if(navigator.share) navigator.share({title:"Homm Ürün Keşif Testi",text:txt,url:location.href}).catch(()=>{});
  else navigator.clipboard?.writeText(txt+" "+location.href).then(()=>toast("Sonuç kopyalandı"));
 }
 function toast(t){const el=$("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1800)}
-
-function openImageModal(src,alt){
+function openImageModal(code){
+ const p=BY[code];if(!p)return;
  const modal=$("imageModal"), img=$("imageModalImg");
- img.src=src;img.alt=alt||"Ürün görseli";modal.classList.add("open");document.body.style.overflow="hidden";
+ img.onerror=()=>{if(p.imgSrc&&img.src!==p.imgSrc)img.src=p.imgSrc};
+ img.src=large(p);img.alt=p.name;$("zoomCaption").textContent=`${p.name} • ${p.code}`;
+ modal.classList.add("open");document.body.style.overflow="hidden";
 }
 function closeImageModal(e,force){
- if(force || e.target.id==="imageModal"){ $("imageModal").classList.remove("open");$("imageModalImg").src="";document.body.style.overflow=""; }
+ if(force || e.target.id==="imageModal"){ $("imageModal").classList.remove("open");$("imageModalImg").onerror=null;$("imageModalImg").removeAttribute("src");document.body.style.overflow=""; }
 }
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("imageModal")?.classList.contains("open"))closeImageModal({target:{id:"imageModal"}},true)});
 function restart(){
- flow=[];step=0;answers=[];$("counter").textContent="Başlangıç";$("progress").style.width="0%";switchScreen("start");
+ flow=[];step=0;answers=[];currentCat=null;currentNeed=null;setProgress("Başlangıç",0);
+ switchScreen("start");
 }
+boot().then(setupObserver);
 </script>
 </body>
 </html>
