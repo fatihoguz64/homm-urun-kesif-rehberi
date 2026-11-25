@@ -208,12 +208,20 @@ html,body{max-width:100%;overflow-x:hidden}
 .visual .productImgWrap,.card .visual .productImgWrap.serumFullView{position:absolute;inset:0;width:auto;height:auto;display:block;padding:8px}
 .card .visual .productImgWrap.serumFullView{padding:5px}
 .visual .productImgWrap img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:center}
+/* V23 - sales representative badge, top-right corner */
+.repBar{display:flex;justify-content:flex-end;padding:14px 16px 0;position:relative;z-index:3}
+.rep{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#2f8c5a,#145035);color:#fff;border-radius:999px;padding:7px 16px;box-shadow:0 8px 18px rgba(30,103,65,.18);max-width:100%}
+.repTxt{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.repTxt small{font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;opacity:.85}
+.repTxt b{font-size:13.5px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.repBar + .header{padding-top:8px}
 </style>
 </head>
 <body>
 <div class="app">
  <main class="phone">
   <div class="decor d1">🌿</div><div class="decor d2">🍃</div>
+  <div class="repBar"><div class="rep"><span class="repTxt"><small>Satış Temsilcisi</small><b>Ümmüşen Armağan</b></span></div></div>
   <header class="header">
    <div class="brand">
     <div class="brandmark">H</div>
@@ -290,7 +298,7 @@ html,body{max-width:100%;overflow-x:hidden}
    <div class="note">Ürün bilgileri Homm Bitkisel resmî Türkiye sitesinden (hommbitkisel.com.tr) alınmıştır. Takviye edici gıdalar ilaç değildir; hastalıkların önlenmesi veya tedavisi amacıyla kullanılmaz.</div>
   </section>
 
-  <div class="footer">Bağımsız temsilci kullanımına uygun ürün keşif arayüzü • Ürün bilgileri resmî siteden 03.11.2026 tarihinde alınmıştır. • V22</div>
+  <div class="footer">Bağımsız temsilci kullanımına uygun ürün keşif arayüzü • Ürün bilgileri resmî siteden 25.11.2026 tarihinde alınmıştır. • V23</div>
  </main>
 </div>
 <div class="toast" id="toast">Bağlantı kopyalandı</div>
@@ -303,7 +311,7 @@ html,body{max-width:100%;overflow-x:hidden}
   <div class="zoomHint">Kapatmak için dışarı dokun</div>
  </div>
 </div>
-<script src="products.js?v=5021d8e7"></script>
+<script src="products.js?v=87219aec"></script>
 <script>
 const PHONE="905337650990";
 const MODE="files"; // "inline": tek dosya, "files": GitHub Pages
